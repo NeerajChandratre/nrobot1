@@ -1,0 +1,5 @@
+ncrbt_descrptn
+/root/nc_finalprojct/devel/.private/ncIrbt_descrptn/cmake.lock /root/nc_finalprojct/devel/./cmake.lock
+/root/nc_finalprojct/devel/.private/ncIrbt_descrptn/share/ncIrbt_descrptn/cmake/ncIrbt_descrptnConfig-version.cmake /root/nc_finalprojct/devel/share/ncIrbt_descrptn/cmake/ncIrbt_descrptnConfig-version.cmake
+/root/nc_finalprojct/devel/.private/ncIrbt_descrptn/share/ncIrbt_descrptn/cmake/ncIrbt_descrptnConfig.cmake /root/nc_finalprojct/devel/share/ncIrbt_descrptn/cmake/ncIrbt_descrptnConfig.cmake
+/root/nc_finalprojct/devel/.private/ncIrbt_descrptn/lib/pkgconfig/ncIrbt_descrptn.pc /root/nc_finalprojct/devel/lib/pkgconfig/ncIrbt_descrptn.pc

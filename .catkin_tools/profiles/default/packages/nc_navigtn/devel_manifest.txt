@@ -1,0 +1,5 @@
+nc_navigtn
+/root/nc_finalprojct_ses598_k/devel/.private/nc_navigtn/cmake.lock /root/nc_finalprojct_ses598_k/devel/./cmake.lock
+/root/nc_finalprojct_ses598_k/devel/.private/nc_navigtn/share/nc_navigtn/cmake/nc_navigtnConfig.cmake /root/nc_finalprojct_ses598_k/devel/share/nc_navigtn/cmake/nc_navigtnConfig.cmake
+/root/nc_finalprojct_ses598_k/devel/.private/nc_navigtn/share/nc_navigtn/cmake/nc_navigtnConfig-version.cmake /root/nc_finalprojct_ses598_k/devel/share/nc_navigtn/cmake/nc_navigtnConfig-version.cmake
+/root/nc_finalprojct_ses598_k/devel/.private/nc_navigtn/lib/pkgconfig/nc_navigtn.pc /root/nc_finalprojct_ses598_k/devel/lib/pkgconfig/nc_navigtn.pc

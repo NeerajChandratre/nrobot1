@@ -1,0 +1,2 @@
+/root/nc_finalprojct/devel/./cmake.lock 305
+/root/nc_finalprojct_ses598_k/devel/./cmake.lock 10

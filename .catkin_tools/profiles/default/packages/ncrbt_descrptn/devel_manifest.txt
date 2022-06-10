@@ -1,0 +1,5 @@
+ncrbt_descrptn
+/root/nc_finalprojct_ses598_k/devel/.private/ncrbt_descrptn/cmake.lock /root/nc_finalprojct_ses598_k/devel/./cmake.lock
+/root/nc_finalprojct_ses598_k/devel/.private/ncrbt_descrptn/share/ncrbt_descrptn/cmake/ncrbt_descrptnConfig.cmake /root/nc_finalprojct_ses598_k/devel/share/ncrbt_descrptn/cmake/ncrbt_descrptnConfig.cmake
+/root/nc_finalprojct_ses598_k/devel/.private/ncrbt_descrptn/share/ncrbt_descrptn/cmake/ncrbt_descrptnConfig-version.cmake /root/nc_finalprojct_ses598_k/devel/share/ncrbt_descrptn/cmake/ncrbt_descrptnConfig-version.cmake
+/root/nc_finalprojct_ses598_k/devel/.private/ncrbt_descrptn/lib/pkgconfig/ncrbt_descrptn.pc /root/nc_finalprojct_ses598_k/devel/lib/pkgconfig/ncrbt_descrptn.pc

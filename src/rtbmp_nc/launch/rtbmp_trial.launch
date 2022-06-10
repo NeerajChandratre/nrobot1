@@ -1,0 +1,70 @@
+<!-- uses kinect+odometry+2D laser -->
+<launch>
+  <group ns="rtabmap">
+	<arg name="database_path" default="~/.ros/rtabmap.db"/>
+   <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen">
+      <remap from="rgb/image"       to="/iRobot/image_raw"/>
+      <remap from="depth/image"     to="/iRobot/depth/image_raw"/>
+      <remap from="rgb/camera_info" to="/iRobot/camera_info"/>
+
+
+  	  <param name="database_path" type="string" value="$(arg database_path)"/>
+          <param name="frame_id" type="string" value="base_link"/>
+          <param name="subscribe_depth" type="bool" value="true"/>
+          <param name="subscribe_rgbd" type="bool" value="false"/>
+          <param name="subscribe_scan" type="bool" value="true"/>
+          <remap from="scan" to="/iRobot/laser_scan"/>   <!-- Read laser scan data obtained from 2D laser scan-->
+          <remap from="grid_map" to="/map"/>  <!-- I think this thing will help move_base to read the grid map -->
+   	  <param name="odom_frame_id" value="odom"/>
+          <param name="odom_tf_linear_variance" value="0.001"/>
+          <param name="odom_tf_angular_variance" value="0.001"/>
+            <!-- Rate (Hz) at which new nodes are added to map -->
+            <param name="Rtabmap/DetectionRate" type="string" value="1"/>
+
+            <!-- 2D SLAM -->
+            <param name="Reg/Force3DoF" type="string" value="true"/>
+
+            <!-- Loop Closure Detection -->
+            <param name="Kp/DetectorStrategy" type="string" value="0"/>
+
+            <!-- Maximum visual words per image (bag-of-words) -->
+            <param name="Kp/MaxFeatures" type="string" value="400"/>
+
+            <!-- Used to extract more or less SURF features -->
+            <param name="SURF/HessianThreshold" type="string" value="100"/>
+
+            <!-- Loop Closure Constraint -->
+            <!-- 0=Visual, 1=ICP (1 requires scan)-->
+            <param name="Reg/Strategy" type="string" value="0"/>
+
+            <!-- Minimum visual inliers to accept loop closure -->
+            <param name="Vis/MinInliers" type="string" value="100"/>
+    	 <!-- LOCALIZATION MODE -->
+    <param name="Mem/IncrementalMemory" type="string" value="false"/>	<!-- (1)when true slam mode else localiztn mode-->
+    <param name="Mem/NotLinkedNodesKept" type="string" value="true"/>  <!-- (2)set to false during slam mode-->
+     </node>
+   									<!-- (3)disable this during localiztn(optnl)-->
+    <node name="rgbd_odometry" pkg="rtabmap_ros" type="rgbd_odometry" output="screen">
+      <param name="frame_id"                    type="string" value="base_link"/>
+      <param name="Reg/Force3DoF"               type="string" value="true"/>
+      <param name="Vis/InlierDistance"          type="string" value="0.05"/>
+      <remap from="rgb/image"       to="/iRobot/image_raw"/>
+      <remap from="depth/image"     to="/iRobot/depth/image_raw"/>
+      <remap from="rgb/camera_info" to="/iRobot/camera_info"/>
+
+    </node>
+
+        <!-- visualization with rtabmapviz -->
+        <node pkg="rtabmap_ros" type="rtabmapviz" name="rtabmapviz" args="-d $(find rtabmap_ros)/launch/config/rgbd_gui.ini" output="screen">
+            <param name="subscribe_depth"             type="bool" value="true"/>
+            <param name="subscribe_scan"              type="bool" value="true"/>
+            <param name="frame_id"                    type="string" value="base_link"/>
+            <param name="queue_size"                  type="int" value="10"/>
+            <!--<remap from="odom"            to="/odom"/>--> <!--(4)during locliztn, enable this(optnl)-->
+	    <remap from="rgb/image"       to="/iRobot/image_raw"/>
+	    <remap from="depth/image"     to="/iRobot/depth/image_raw"/>
+	    <remap from="rgb/camera_info" to="/iRobot/camera_info"/>
+            <remap from="scan"            to="/iRobot/laser_scan"/>
+        </node>
+  </group>
+</launch>

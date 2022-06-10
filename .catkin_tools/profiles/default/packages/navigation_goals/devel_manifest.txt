@@ -1,0 +1,5 @@
+navigation_goals
+/root/nc_finalprojct_ses598_k/devel/.private/navigation_goals/cmake.lock /root/nc_finalprojct_ses598_k/devel/./cmake.lock
+/root/nc_finalprojct_ses598_k/devel/.private/navigation_goals/share/navigation_goals/cmake/navigation_goalsConfig-version.cmake /root/nc_finalprojct_ses598_k/devel/share/navigation_goals/cmake/navigation_goalsConfig-version.cmake
+/root/nc_finalprojct_ses598_k/devel/.private/navigation_goals/share/navigation_goals/cmake/navigation_goalsConfig.cmake /root/nc_finalprojct_ses598_k/devel/share/navigation_goals/cmake/navigation_goalsConfig.cmake
+/root/nc_finalprojct_ses598_k/devel/.private/navigation_goals/lib/pkgconfig/navigation_goals.pc /root/nc_finalprojct_ses598_k/devel/lib/pkgconfig/navigation_goals.pc

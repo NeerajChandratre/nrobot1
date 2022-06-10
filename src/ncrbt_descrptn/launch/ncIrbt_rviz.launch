@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <!--get the model (send urdf to param server) -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find ncrbt_description)/model/iRobot.urdf.xacro'"/>
+  <!--send fake joint values (Publishing some joint states) -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+  <param name="use_gui" value="False"/>
+  
+  <!-- Combine joint values (Executing the robot state publisher) -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+
+  <!-- Show in Rviz  (running rviz) -->
+  <!--node name="rviz" pkg="rviz" type="rviz"/-->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ncrbt_description)/rviz/test.rviz"/>
+
+</launch>

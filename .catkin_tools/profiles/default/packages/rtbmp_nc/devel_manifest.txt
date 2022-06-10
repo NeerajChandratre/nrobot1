@@ -1,0 +1,5 @@
+rtbmp_nc
+/root/nc_finalprojct_ses598_k/devel/.private/rtbmp_nc/cmake.lock /root/nc_finalprojct_ses598_k/devel/./cmake.lock
+/root/nc_finalprojct_ses598_k/devel/.private/rtbmp_nc/share/rtbmp_nc/cmake/rtbmp_ncConfig.cmake /root/nc_finalprojct_ses598_k/devel/share/rtbmp_nc/cmake/rtbmp_ncConfig.cmake
+/root/nc_finalprojct_ses598_k/devel/.private/rtbmp_nc/share/rtbmp_nc/cmake/rtbmp_ncConfig-version.cmake /root/nc_finalprojct_ses598_k/devel/share/rtbmp_nc/cmake/rtbmp_ncConfig-version.cmake
+/root/nc_finalprojct_ses598_k/devel/.private/rtbmp_nc/lib/pkgconfig/rtbmp_nc.pc /root/nc_finalprojct_ses598_k/devel/lib/pkgconfig/rtbmp_nc.pc
